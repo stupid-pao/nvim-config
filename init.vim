@@ -23,11 +23,19 @@ Plug 'myusuf3/numbers.vim'
 Plug 'airblade/vim-gitgutter'
 " go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+Plug 'mhinz/vim-startify'
+
+"python
+"python code folding
+Plug 'tmhedberg/SimpylFold'
 " hightlighting
 Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for': 'python' }
 Plug 'chrisbra/Colorizer' " Show colors with :ColorHighlight
 
-Plug 'mhinz/vim-startify'
+Plug 'majutsushi/tagbar'
+
+Plug 'mbbill/undotree'
 
 
 
@@ -66,7 +74,11 @@ let g:highlightedyank_highlight_duration = 200
 
 
 " === NERDTree
-noremap tt :NERDTreeToggle<CR>
+noremap <leader>tn :NERDTreeToggle<CR>
+
+" fzf
+noremap <leader>ff :FZF<enter>
+noremap <leader>fa :Ag 
 
 " cursor move insert model
 inoremap <C-b> <Left>
@@ -76,11 +88,21 @@ inoremap <C-f> <Right>
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
 
+" code folding
+set foldlevel=99
 
+" tagbar
+noremap <leader>tt :TagbarToggle<enter>
 
+" undotree
+noremap <leader>tu :UndotreeToggle<enter>
 
+" buffer
+noremap <leader>bb :Buffers<enter>
 
-
+" my custome operation
+noremap <leader>w/ <C-w>v
+" <C-w> + s  上下分屏
 
 
 
