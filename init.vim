@@ -26,6 +26,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'machakann/vim-highlightedyank'
 " Theme
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'ajmwagar/vim-deus'
+Plug 'morhetz/gruvbox'
 " fzf
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -46,10 +48,11 @@ Plug 'mbbill/undotree'
 
 
 
+
 call plug#end()
 
 
-colorscheme dracula
+"colorscheme dracula
 
 " set <LEADER> as <SPACE>
 " 注释 LEADER cc   反注释 LEADER cu
@@ -99,14 +102,16 @@ nmap <silent> gi <Plug>(coc-implementation)
 " 列出引用
 nmap <silent> gr <Plug>(coc-references)
 nmap <leader>rn <Plug>(coc-rename)
+" exit terminal mode use <C-\><C-n>
+nmap <leader>tl <Plug>(coc-terminal-toggle)
 
-" Using CocList
-" Show all diagnostics
+"" Using CocList
+"" Show all diagnostics
 nnoremap <silent> <space>ca  :<C-u>CocList diagnostics<cr>
 " Manage extensions
 nnoremap <silent> <space>ce  :<C-u>CocList extensions<cr>
 " Show commands
-nnoremap <silent> <space>cc  :<C-u>CocList commands<cr>
+nnoremap <silent> <space>cm  :<C-u>CocList commands<cr>
 " Find symbol of current document
 nnoremap <silent> <space>co  :<C-u>CocList outline<cr>
 " Search workspace symbols
@@ -173,10 +178,12 @@ noremap <leader>w/ <C-w>v
 " <C-w> + s  上下分屏
 
 
-
-
-
-
+set termguicolors	" enable true colors support
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set background=dark
+"color dracula
+color deus
+"color gruvbox
 
 
 
