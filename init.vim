@@ -10,6 +10,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'tmhedberg/SimpylFold'
 " hightlighting
 "Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins', 'for': 'python' }
+Plug 'vim-python/python-syntax'
 " ====
 
 "coc Auto Complete
@@ -178,6 +179,7 @@ noremap <leader>w/ <C-w>v
 " <C-w> + s  上下分屏
 
 
+set t_Co=256
 set termguicolors	" enable true colors support
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set background=dark
@@ -185,6 +187,20 @@ set background=dark
 color deus
 "color gruvbox
 
+" vim-go settings
+let g:go_highlight_types = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
+noremap <leader>db :GoDebugBreakpoint<enter>
+noremap <leader>dc :GoDebugContinue<enter>
+noremap <leader>dn :GoDebugNext<enter>
+noremap <leader>ds :GoDebugStep<enter>
 
 
+" python hightlighting
+let g:python_highlight_all = 1
 
