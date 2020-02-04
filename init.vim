@@ -81,50 +81,50 @@ let g:airline_theme='light'
 			"\ coc#refresh()
 "inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "inoremap <silent><expr> <c-space> coc#refresh()
-let g:coc_global_extensions = [
-  \ 'coc-python',
-  \ 'coc-yank',
-  \ 'coc-tsserver',
-  \ 'coc-css',
-  \ 'coc-json',
-  \ 'coc-html',
-  \ 'coc-vimlsp',
-  \ 'coc-highlight'
-\ ]
+"let g:coc_global_extensions = [
+  "\ 'coc-python',
+  "\ 'coc-yank',
+  "\ 'coc-tsserver',
+  "\ 'coc-css',
+  "\ 'coc-json',
+  "\ 'coc-html',
+  "\ 'coc-vimlsp',
+  "\ 'coc-highlight'
+"\ ]
 " Useful commands
 " 获取(yank)(vim的剪切板)历史列表
-nnoremap <silent> <space>y :<C-u>CocList -A --normal yank<cr>
-" 跳转至定义
-nmap <silent> gd <Plug>(coc-definition)
-" 跳转至类型定义
-nmap <silent> gy <Plug>(coc-type-definition)
-" 列出实现
-nmap <silent> gi <Plug>(coc-implementation)
-" 列出引用
-nmap <silent> gr <Plug>(coc-references)
-nmap <leader>rn <Plug>(coc-rename)
-" exit terminal mode use <C-\><C-n>
-nmap <leader>tl <Plug>(coc-terminal-toggle)
+"nnoremap <silent> <space>y :<C-u>CocList -A --normal yank<cr>
+"" 跳转至定义
+"nmap <silent> gd <Plug>(coc-definition)
+"" 跳转至类型定义
+"nmap <silent> gy <Plug>(coc-type-definition)
+"" 列出实现
+"nmap <silent> gi <Plug>(coc-implementation)
+"" 列出引用
+"nmap <silent> gr <Plug>(coc-references)
+"nmap <leader>rn <Plug>(coc-rename)
+"" exit terminal mode use <C-\><C-n>
+"nmap <leader>tl <Plug>(coc-terminal-toggle)
 
-"" Using CocList
-"" Show all diagnostics
-nnoremap <silent> <space>ca  :<C-u>CocList diagnostics<cr>
-" Manage extensions
-nnoremap <silent> <space>ce  :<C-u>CocList extensions<cr>
-" Show commands
-nnoremap <silent> <space>cm  :<C-u>CocList commands<cr>
-" Find symbol of current document
-nnoremap <silent> <space>co  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <space>cs  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent> <space>cj  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent> <space>ck  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent> <space>cp  :<C-u>CocListResume<CR>
+""" Using CocList
+""" Show all diagnostics
+"nnoremap <silent> <space>ca  :<C-u>CocList diagnostics<cr>
+"" Manage extensions
+"nnoremap <silent> <space>ce  :<C-u>CocList extensions<cr>
+"" Show commands
+"nnoremap <silent> <space>cm  :<C-u>CocList commands<cr>
+"" Find symbol of current document
+"nnoremap <silent> <space>co  :<C-u>CocList outline<cr>
+"" Search workspace symbols
+"nnoremap <silent> <space>cs  :<C-u>CocList -I symbols<cr>
+"" Do default action for next item.
+"nnoremap <silent> <space>cj  :<C-u>CocNext<CR>
+"" Do default action for previous item.
+"nnoremap <silent> <space>ck  :<C-u>CocPrev<CR>
+"" Resume latest coc list
+"nnoremap <silent> <space>cp  :<C-u>CocListResume<CR>
 
-autocmd CursorHold * silent call CocActionAsync('highlight')
+"autocmd CursorHold * silent call CocActionAsync('highlight')
 
 
 
@@ -146,6 +146,12 @@ hi HighlightedyankRegion cterm=reverse gui=reverse
 
 let g:highlightedyank_highlight_duration = 200 
 
+" vim-go
+let g:go_fmt_command = "goimports"
+let g:go_auto_type_info = 1
+"按. 自动补全提示
+"au filetype go inoremap <buffer> . .<C-x><C-o>
+
 
 " === NERDTree
 noremap <leader>tn :NERDTreeToggle<CR>
@@ -157,6 +163,9 @@ noremap <leader>fa :Ag
 " cursor move insert model
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
+
+" meta + delete  插入模式删除一个单词
+inoremap <M-BS> <C-\><C-o>dB
 
 " coursorline
 autocmd InsertLeave,WinEnter * set cursorline
