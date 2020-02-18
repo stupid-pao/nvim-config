@@ -165,7 +165,8 @@ inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 
 " meta + delete  插入模式删除一个单词
-inoremap <M-BS> <C-\><C-o>dB
+"inoremap <M-BS> <C-\><C-o>dB
+inoremap <M-BS> <C-\><C-o>db
 
 " coursorline
 autocmd InsertLeave,WinEnter * set cursorline
@@ -173,6 +174,11 @@ autocmd InsertEnter,WinLeave * set nocursorline
 
 " code folding
 set foldlevel=99
+
+" tab size
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 " tagbar
 noremap <leader>tt :TagbarToggle<enter>
