@@ -34,7 +34,7 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 " line number
 Plug 'myusuf3/numbers.vim'
-" git
+" A Vim plugin which shows a git diff in the 'gutter'
 Plug 'airblade/vim-gitgutter'
 " go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -47,6 +47,9 @@ Plug 'majutsushi/tagbar'
 
 Plug 'mbbill/undotree'
 
+Plug 'honza/vim-snippets'
+
+Plug 'tpope/vim-surround'
 
 
 
@@ -219,4 +222,21 @@ noremap <leader>ds :GoDebugStep<enter>
 " python hightlighting
 let g:python_highlight_all = 1
 
+" gitgutter  config 
+set updatetime=100
+set signcolumn=yes
+highlight clear SignColumn
+highlight GitGutterAdd ctermfg=green guifg=#50fa7b
+highlight GitGutterChange ctermfg=blue guifg=#8be9fd
+highlight GitGutterDelete ctermfg=red guifg=#ff5555
+highlight GitGutterChangeDelete ctermfg=blue guifg=#8be9fd
+" █ ➧ ⇒ ⇛ ᐅ ▶ ⇲
+let g:gitgutter_sign_added              ='█'
+let g:gitgutter_sign_modified           = '█'
+let g:gitgutter_sign_removed            = 'ᐅ'
+let g:gitgutter_sign_removed_first_line = '▶'
+let g:gitgutter_sign_modified_removed   = '⇲'
+
+
+let  NERDTreeIgnore=[ '\~$' ,  '\.pyc$' ,  '\.swp$' ]
 
