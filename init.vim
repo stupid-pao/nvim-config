@@ -21,6 +21,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" insert or delete brackets, parens, quotes in pair 
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
@@ -39,6 +41,7 @@ Plug 'airblade/vim-gitgutter'
 " go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" 欢迎界面
 Plug 'mhinz/vim-startify'
 
 Plug 'chrisbra/Colorizer' " Show colors with :ColorHighlight
@@ -51,6 +54,8 @@ Plug 'honza/vim-snippets'
 
 Plug 'tpope/vim-surround'
 
+"Fuzzy file, buffer, mru, tag, etc finder
+Plug 'kien/ctrlp.vim'
 
 
 call plug#end()
@@ -230,13 +235,18 @@ highlight GitGutterAdd ctermfg=green guifg=#50fa7b
 highlight GitGutterChange ctermfg=blue guifg=#8be9fd
 highlight GitGutterDelete ctermfg=red guifg=#ff5555
 highlight GitGutterChangeDelete ctermfg=blue guifg=#8be9fd
-" █ ➧ ⇒ ⇛ ᐅ ▶ ⇲
-let g:gitgutter_sign_added              ='█'
-let g:gitgutter_sign_modified           = '█'
-let g:gitgutter_sign_removed            = 'ᐅ'
-let g:gitgutter_sign_removed_first_line = '▶'
-let g:gitgutter_sign_modified_removed   = '⇲'
+" █ ▉ ▉ ➧ ⇒ ⇛ ᐅ ▶ ⇲ ◽ 
+let g:gitgutter_sign_added              =' █'
+let g:gitgutter_sign_modified           = ' █'
+let g:gitgutter_sign_removed            = ' ᐅ'
+let g:gitgutter_sign_removed_first_line = ' ▶'
+let g:gitgutter_sign_modified_removed   = ' ⇲'
 
 
 let  NERDTreeIgnore=[ '\~$' ,  '\.pyc$' ,  '\.swp$' ]
 
+"vim多窗切换快捷键
+map gh <C-W>h
+map gj <C-W>j
+map gk <C-W>k
+map gl <C-W>l
