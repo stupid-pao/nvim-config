@@ -250,3 +250,14 @@ map gh <C-W>h
 map gj <C-W>j
 map gk <C-W>k
 map gl <C-W>l
+
+let g:python3_host_prog = '/usr/local/bin/python3'
+
+" to make fzf find in current .git root
+function! s:find_git_root()
+  return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
+endfunction
+
+command! ProjectFiles execute 'Files' s:find_git_root()
+
+map <C-p> :ProjectFiles<CR>
