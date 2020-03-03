@@ -164,10 +164,6 @@ let g:go_auto_type_info = 1
 " === NERDTree
 noremap <leader>tn :NERDTreeToggle<CR>
 
-" fzf
-noremap <leader>ff :FZF<enter>
-noremap <leader>fa :Ag 
-
 " cursor move insert model
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
@@ -253,6 +249,7 @@ map gl <C-W>l
 
 let g:python3_host_prog = '/usr/local/bin/python3'
 
+" fzf
 " to make fzf find in current .git root
 function! s:find_git_root()
   return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
@@ -261,3 +258,6 @@ endfunction
 command! ProjectFiles execute 'Files' s:find_git_root()
 
 map <C-p> :ProjectFiles<CR>
+
+"noremap <leader>ff :FZF<enter>
+"noremap <leader>fa :Ag 
