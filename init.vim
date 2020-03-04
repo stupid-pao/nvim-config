@@ -259,5 +259,5 @@ command! ProjectFiles execute 'Files' s:find_git_root()
 
 map <C-p> :ProjectFiles<CR>
 
-"noremap <leader>ff :FZF<enter>
-"noremap <leader>fa :Ag 
+noremap <leader>ff :GFiles<enter>
+noremap <leader>fa :Ag 
