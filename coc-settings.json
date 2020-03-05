@@ -15,7 +15,7 @@
   "python.linting.flake8Enabled": true,
   "python.linting.flake8Args": [
   	"--max-line-length=120",
-        "--ignore=E402,F841,F401,E302,E305, W293, E501, E128, W292, E303, W291"
+        "--ignore=E402,F841,F401,E302,E305, W293, E501, E128, W292, E303, W291, N806"
   ],
   "html.filetypes": [ "html", "handlebars", "htmldjango" ],
   "html.enable": true,
