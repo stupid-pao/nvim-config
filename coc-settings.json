@@ -4,6 +4,7 @@
   "typescript.suggestionActions.enabled": false,
   "coc.preferences.extensionUpdateCheck": "never",
   "coc.preferences.colorSupport": true,
+  "coc.preferences.rootPatterns":[".git",".hg",".projections.json", ".root"],
   "languageserver": {
     "golang": {
       "command": "gopls",
@@ -11,6 +12,7 @@
       "filetypes": ["go"]
     }
   },
+  "python.jediEnabled": false,
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": true,
   "python.linting.flake8Args": [
