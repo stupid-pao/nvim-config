@@ -4,7 +4,7 @@
   "typescript.suggestionActions.enabled": false,
   "coc.preferences.extensionUpdateCheck": "never",
   "coc.preferences.colorSupport": true,
-  "coc.preferences.rootPatterns":[".git",".hg",".projections.json", ".root"],
+  "coc.preferences.rootPatterns":[".vscode", ".git",".hg",".projections.json"],
   "languageserver": {
     "golang": {
       "command": "gopls",

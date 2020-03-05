@@ -78,8 +78,7 @@ let g:airline#extensions#virtualenv#enabled = 1
 " ===
 " === coc
 " ===
-set sessionoptions+=globals
-"autocmd FileType python let b:coc_root_patterns = ['.git', '.env', '.root']
+"set sessionoptions+=globals
 "silent! au BufEnter,BufRead,BufNewFile * silent! unmap if
 "let g:coc_global_extensions = ['coc-python', 'coc-vimlsp', 'coc-html', 'coc-json', 'coc-css', 'coc-tsserver', 'coc-yank', 'coc-lists', 'coc-gitignore', 'coc-vimlsp', 'coc-tailwindcss', 'coc-stylelint']
 "set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
@@ -264,9 +263,10 @@ endfunction
 
 command! ProjectFiles execute 'Files' s:find_git_root()
 
-map <C-p> :ProjectFiles<CR>
+"map <C-p> :ProjectFiles<CR>
 
-noremap <leader>ff :GFiles<enter>
+noremap <leader>ff :ProjectFiles<CR>
+"noremap <leader>ff :GFiles<enter>
 noremap <leader>fa :Ag 
 
 " gutentags config
