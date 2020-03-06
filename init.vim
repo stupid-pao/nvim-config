@@ -199,6 +199,9 @@ noremap <leader>bb :Buffers<enter>
 noremap <leader>bn :bnext<enter>
 noremap <leader>bp :bprev<enter>
 
+" format
+xmap <leader>pf  <Plug>(coc-format-selected)
+nmap <leader>pf  <Plug>(coc-format-selected)
 
 " my custome operation
 noremap <leader>w/ <C-w>v
