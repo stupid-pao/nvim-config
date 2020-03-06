@@ -196,6 +196,9 @@ noremap <leader>tu :UndotreeToggle<enter>
 
 " buffer
 noremap <leader>bb :Buffers<enter>
+noremap <leader>bn :bnext<enter>
+noremap <leader>bp :bprev<enter>
+
 
 " my custome operation
 noremap <leader>w/ <C-w>v
