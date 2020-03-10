@@ -179,6 +179,10 @@ let NERDTreeMinimalUI=1  " Start NERDTree in minimal UI mode (No help lines)
 let NERDTreeDirArrows=1  " Display arrows instead of ascii art in NERDTree
 let NERDTreeQuitOnOpen=1 " Close NERDtree when files was opened
 
+ " Customize icons on Nerdtree
+let g:NERDTreeDirArrowExpandable = '►'
+let g:NERDTreeDirArrowCollapsible = '▼'
+
 
 " cursor move insert model
 inoremap <C-b> <Left>
