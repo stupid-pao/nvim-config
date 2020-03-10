@@ -60,6 +60,10 @@ Plug 'kien/ctrlp.vim'
 " a management for ctags file
 Plug 'ludovicchabant/vim-gutentags'
 
+" add file type icons to vim plugins
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
 call plug#end()
 
 
@@ -167,6 +171,14 @@ let g:go_auto_type_info = 1
 
 " === NERDTree
 noremap <leader>tn :NERDTreeToggle<CR>
+let  NERDTreeIgnore=[ '\~$' ,  '\.pyc$' ,  '\.swp$' ]
+let g:NERDTreeWinSize = 30
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+let NERDTreeMinimalUI=1  " Start NERDTree in minimal UI mode (No help lines)
+let NERDTreeDirArrows=1  " Display arrows instead of ascii art in NERDTree
+let NERDTreeQuitOnOpen=1 " Close NERDtree when files was opened
+
 
 " cursor move insert model
 inoremap <C-b> <Left>
@@ -250,8 +262,6 @@ let g:gitgutter_sign_removed            = ' ᐅ'
 let g:gitgutter_sign_removed_first_line = ' ▶'
 let g:gitgutter_sign_modified_removed   = ' ⇲'
 
-
-let  NERDTreeIgnore=[ '\~$' ,  '\.pyc$' ,  '\.swp$' ]
 
 "vim多窗切换快捷键
 map gh <C-W>h
